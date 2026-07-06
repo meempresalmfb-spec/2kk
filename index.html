@@ -37,12 +37,12 @@
   .brand{display:flex;align-items:center;gap:14px}
   .brand-mark{width:54px;height:54px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#d98a5a);
     display:grid;place-items:center;box-shadow:0 8px 28px rgba(210,75,62,.35);
-    font-family:'Bebas Neue';font-size:34px;color:#1a1106;letter-spacing:1px}
-  .brand h1{margin:0;font-family:'Bebas Neue';font-size:34px;letter-spacing:3px;line-height:1}
-  .brand .sub{font-family:'JetBrains Mono';font-size:11px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-top:4px}
+    font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:34px;color:#1a1106;letter-spacing:1px}
+  .brand h1{margin:0;font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:34px;letter-spacing:3px;line-height:1}
+  .brand .sub{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-top:4px}
   .top-actions{display:flex;gap:8px;flex-wrap:wrap}
   .btn{appearance:none;border:1px solid var(--line-2);background:var(--bg-2);color:var(--text);
-    padding:10px 14px;border-radius:10px;font-family:'JetBrains Mono';font-size:11px;letter-spacing:1.5px;
+    padding:10px 14px;border-radius:10px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px;letter-spacing:1.5px;
     text-transform:uppercase;cursor:pointer;transition:all .15s ease;font-weight:700}
   .btn:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
   .btn.primary{background:var(--accent);color:#1a1106;border-color:var(--accent)}
@@ -58,38 +58,38 @@
     radial-gradient(400px 200px at 100% 100%,rgba(189,138,90,.10),transparent 60%);pointer-events:none}
   .pc-id{display:flex;flex-direction:column;gap:10px;position:relative;z-index:1}
   .pc-id input.name{background:transparent;border:none;color:var(--text);
-    font-family:'Bebas Neue';font-size:42px;letter-spacing:3px;outline:none;padding:0;width:100%}
+    font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:42px;letter-spacing:3px;outline:none;padding:0;width:100%}
   .pc-id input.name:focus{color:var(--accent)}
   .pc-meta{display:flex;gap:6px;flex-wrap:wrap}
   .pc-meta select,.pc-meta input{background:var(--bg);border:1px solid var(--line);color:var(--text);
-    padding:6px 10px;border-radius:8px;font-family:'JetBrains Mono';font-size:11px;outline:none}
+    padding:6px 10px;border-radius:8px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px;outline:none}
   .pc-meta select:focus,.pc-meta input:focus{border-color:var(--accent)}
   .pc-meta input{width:78px}
   .pc-meta input.team-input{width:120px}
 
   .pc-overall{display:flex;flex-direction:column;align-items:center;gap:4px;position:relative;z-index:1}
-  .ovr-num{font-family:'Bebas Neue';font-size:108px;line-height:.9;letter-spacing:2px;
+  .ovr-num{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:108px;line-height:.9;letter-spacing:2px;
     background:linear-gradient(180deg,#fff,#d98a5a 65%,var(--accent));
     -webkit-background-clip:text;background-clip:text;color:transparent;
     text-shadow:0 0 40px rgba(210,75,62,.25)}
-  .ovr-lbl{font-family:'JetBrains Mono';font-size:11px;color:var(--muted);letter-spacing:3px}
+  .ovr-lbl{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px;color:var(--muted);letter-spacing:3px}
   .ovr-override{display:flex;flex-direction:column;align-items:center;gap:2px;margin-top:8px}
   .ovr-override input{width:64px;background:var(--bg);border:1px solid var(--line);color:var(--text);text-align:center;
-    border-radius:6px;padding:3px;font-family:'Bebas Neue';font-size:18px;outline:none;letter-spacing:1px}
+    border-radius:6px;padding:3px;font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:18px;outline:none;letter-spacing:1px}
   .ovr-override input:focus{border-color:var(--accent)}
-  .ovr-override-lbl{font-family:'JetBrains Mono';font-size:8px;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
+  .ovr-override-lbl{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:8px;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
 
   .pc-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:relative;z-index:1}
   .pc-stat{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
-  .pc-stat .v{font-family:'Bebas Neue';font-size:26px;letter-spacing:1px;line-height:1}
-  .pc-stat .l{font-family:'JetBrains Mono';font-size:9px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-top:3px}
+  .pc-stat .v{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:26px;letter-spacing:1px;line-height:1}
+  .pc-stat .l{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:9px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-top:3px}
   .pc-stat .v.green{color:var(--green)} .pc-stat .v.gold{color:var(--gold)}
   .pc-stat .v.purple{color:var(--accent-2)} .pc-stat .v.blue{color:var(--blue)}
 
   /* TABS */
   .tabs{display:flex;gap:2px;margin-bottom:18px;border-bottom:1px solid var(--line);overflow-x:auto;
     -webkit-overflow-scrolling:touch}
-  .tab{padding:12px 18px;font-family:'Bebas Neue';font-size:18px;letter-spacing:2px;
+  .tab{padding:12px 18px;font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:18px;letter-spacing:2px;
     color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;transition:all .15s;
     background:none;border-top:none;border-left:none;border-right:none;
     touch-action:manipulation;-webkit-tap-highlight-color:rgba(210,75,62,.25);
@@ -111,33 +111,33 @@
   .pool[data-cat="PLY"]::before{background:var(--accent-2)}
   .pool[data-cat="DEF"]::before{background:var(--blue)}
   .pool[data-cat="ATH"]::before{background:var(--green)}
-  .pool .pl{font-family:'JetBrains Mono';font-size:10px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase}
-  .pool .pv{font-family:'Bebas Neue';font-size:28px;letter-spacing:1px;line-height:1}
-  .pool .pearn{font-family:'JetBrains Mono';font-size:9px;color:var(--muted);margin-top:2px}
+  .pool .pl{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase}
+  .pool .pv{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:28px;letter-spacing:1px;line-height:1}
+  .pool .pearn{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:9px;color:var(--muted);margin-top:2px}
 
   /* GAME INPUT */
   .game-input{background:var(--bg-2);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:18px}
   .gi-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:10px}
-  .gi-head h2{margin:0;font-family:'Bebas Neue';font-size:24px;letter-spacing:2px}
+  .gi-head h2{margin:0;font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:24px;letter-spacing:2px}
   .gi-meta{display:flex;gap:8px;flex-wrap:wrap}
   .gi-meta input,.gi-meta select{background:var(--bg);border:1px solid var(--line);color:var(--text);
-    padding:8px 10px;border-radius:8px;font-family:'JetBrains Mono';font-size:11px;outline:none}
+    padding:8px 10px;border-radius:8px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px;outline:none}
   .gi-meta input:focus,.gi-meta select:focus{border-color:var(--accent)}
 
   .gi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
   .stat-input{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;transition:border-color .15s}
   .stat-input:focus-within{border-color:var(--accent)}
-  .stat-input label{display:block;font-family:'JetBrains Mono';font-size:10px;color:var(--muted);
+  .stat-input label{display:block;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--muted);
     letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px}
   .stat-input input{width:100%;background:transparent;border:none;color:var(--text);
-    font-family:'Bebas Neue';font-size:28px;letter-spacing:1px;outline:none;padding:0}
-  .stat-input .hint{font-family:'JetBrains Mono';font-size:9px;color:var(--green);margin-top:2px;letter-spacing:.5px;opacity:.7}
+    font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:28px;letter-spacing:1px;outline:none;padding:0}
+  .stat-input .hint{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:9px;color:var(--green);margin-top:2px;letter-spacing:.5px;opacity:.7}
   .stat-input .hint.neg{color:var(--red)}
   /* v6 — steppers +/- e alvos de toque */
   .stat-input .step-row{display:flex;align-items:center;gap:8px}
   .stat-input .step-row input{flex:1;min-width:0;text-align:center}
   .stepper{flex:0 0 auto;width:44px;height:44px;border-radius:10px;border:1px solid var(--line-2);
-    background:var(--bg-3);color:var(--text);font-family:'Bebas Neue';font-size:26px;line-height:1;
+    background:var(--bg-3);color:var(--text);font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:26px;line-height:1;
     cursor:pointer;user-select:none;-webkit-user-select:none;touch-action:manipulation;
     -webkit-tap-highlight-color:rgba(210,75,62,.25);display:grid;place-items:center;transition:transform .1s,border-color .1s,color .1s}
   .stepper:active{transform:scale(.9);border-color:var(--accent);color:var(--accent)}
@@ -153,21 +153,21 @@
   .phys-stepper .stepper{width:30px;height:30px;font-size:20px;border-radius:6px;border-color:transparent;background:transparent}
   .phys-stepper .stepper:active{background:var(--bg-3)}
   .phys-disp{display:flex;flex-direction:column;align-items:center;min-width:54px;line-height:1}
-  .phys-disp span{font-family:'JetBrains Mono';font-size:13px;font-weight:700;color:var(--text)}
-  .phys-disp small{font-family:'JetBrains Mono';font-size:7px;color:var(--muted);letter-spacing:1px;margin-top:1px}
+  .phys-disp span{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:13px;font-weight:700;color:var(--text)}
+  .phys-disp small{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:7px;color:var(--muted);letter-spacing:1px;margin-top:1px}
   /* v7 — recap de fim de temporada */
   .recap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}
   .recap-stat{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 8px}
-  .recap-stat .rs-v{font-family:'Bebas Neue';font-size:34px;color:var(--gold);line-height:1}
-  .recap-stat .rs-l{font-family:'JetBrains Mono';font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:4px}
-  .recap-note{font-family:'JetBrains Mono';font-size:11px;color:var(--muted);line-height:1.6;text-align:left}
+  .recap-stat .rs-v{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:34px;color:var(--gold);line-height:1}
+  .recap-stat .rs-l{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:4px}
+  .recap-note{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px;color:var(--muted);line-height:1.6;text-align:left}
   .recap-note b{color:var(--text)}
 
   .gi-actions{margin-top:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
     padding-top:16px;border-top:1px solid var(--line)}
-  .xp-preview{font-family:'JetBrains Mono';font-size:11px;color:var(--muted);letter-spacing:.5px;display:flex;gap:6px;flex-wrap:wrap;max-width:70%}
+  .xp-preview{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px;color:var(--muted);letter-spacing:.5px;display:flex;gap:6px;flex-wrap:wrap;max-width:70%}
   .xp-preview .chip{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:4px 8px;font-size:10px}
-  .xp-preview .chip b{color:var(--green);font-family:'Bebas Neue';font-size:14px;margin-left:4px;letter-spacing:.5px}
+  .xp-preview .chip b{color:var(--green);font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:14px;margin-left:4px;letter-spacing:.5px}
   .xp-preview .chip.neg b{color:var(--red)}
   .xp-preview .chip.bonus{border-color:var(--gold)}
   .xp-preview .chip.bonus b{color:var(--gold)}
@@ -179,7 +179,7 @@
   .toggle-chip:hover{border-color:var(--line-2)}
   .toggle-chip input{position:absolute;opacity:0;pointer-events:none}
   .toggle-chip .tg-icon{font-size:18px;filter:grayscale(.6);transition:filter .15s}
-  .toggle-chip .tg-text{display:flex;flex-direction:column;font-family:'JetBrains Mono';font-size:11px;
+  .toggle-chip .tg-text{display:flex;flex-direction:column;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px;
     letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);line-height:1.3}
   .toggle-chip .tg-text small{font-size:9px;letter-spacing:.5px;color:var(--muted);text-transform:none;opacity:.8}
   .toggle-chip:has(input:checked){border-color:var(--gold);background:rgba(244,196,48,.08)}
@@ -189,7 +189,7 @@
   /* v8 — seletor de visualização Regular / Playoffs / Total */
   .stat-filter{display:flex;gap:6px;margin:12px 0 2px;flex-wrap:wrap}
   .sf-btn{appearance:none;cursor:pointer;border:1px solid var(--line-2);background:var(--bg-2);color:var(--muted);
-    font-family:'JetBrains Mono';font-size:11px;letter-spacing:.5px;padding:5px 12px;border-radius:6px;transition:all .15s}
+    font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px;letter-spacing:.5px;padding:5px 12px;border-radius:6px;transition:all .15s}
   .sf-btn:hover{border-color:var(--gold)}
   .sf-btn.active{background:rgba(244,196,48,.12);border-color:var(--gold);color:var(--gold)}
   .toggle-chip#compiledLabel:has(input:checked){border-color:var(--accent-2);background:rgba(189,138,90,.08)}
@@ -197,9 +197,9 @@
   .toggle-chip#compiledLabel:has(input:checked) .tg-text small{color:var(--accent-2)}
   .compiled-num{display:flex;align-items:center;gap:8px;padding:8px 12px;background:rgba(189,138,90,.06);
     border:1px solid rgba(189,138,90,.3);border-radius:10px}
-  .compiled-num label{font-family:'JetBrains Mono';font-size:10px;letter-spacing:1.5px;color:var(--accent-2);text-transform:uppercase}
+  .compiled-num label{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;letter-spacing:1.5px;color:var(--accent-2);text-transform:uppercase}
   .compiled-num input{background:var(--bg);border:1px solid var(--line);color:var(--text);padding:6px 10px;
-    border-radius:6px;font-family:'Bebas Neue';font-size:18px;width:70px;outline:none;text-align:center}
+    border-radius:6px;font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:18px;width:70px;outline:none;text-align:center}
   .compiled-num input:focus{border-color:var(--accent-2)}
   .lbl-tag{background:rgba(189,138,90,.15);color:var(--accent-2);padding:1px 5px;border-radius:3px;
     font-size:8px;letter-spacing:.5px;margin-left:2px}
@@ -207,48 +207,48 @@
   /* BONUS BREAKDOWN */
   .bonus-breakdown{margin-top:14px;padding:14px;background:rgba(244,196,48,.05);border:1px dashed rgba(244,196,48,.4);
     border-radius:10px}
-  .bb-head{font-family:'Bebas Neue';font-size:16px;letter-spacing:2px;color:var(--gold);margin-bottom:10px}
+  .bb-head{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:16px;letter-spacing:2px;color:var(--gold);margin-bottom:10px}
   .bb-list{display:flex;flex-direction:column;gap:6px}
   #careerSplits td, #careerSplits th{padding:4px 6px;border-top:1px solid rgba(189,138,90,.12)}
   .bb-item{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;background:var(--bg);
-    border:1px solid var(--line);border-radius:6px;font-family:'JetBrains Mono';font-size:11px}
+    border:1px solid var(--line);border-radius:6px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px}
   .bb-item .bb-name{color:var(--text);font-weight:600}
-  .bb-item .bb-val{color:var(--gold);font-family:'Bebas Neue';font-size:16px;letter-spacing:.5px}
+  .bb-item .bb-val{color:var(--gold);font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:16px;letter-spacing:.5px}
   .bb-item.penalty .bb-val{color:var(--red)}
   .bb-item .bb-desc{color:var(--muted);font-size:9px;letter-spacing:.5px}
 
   /* SEASON TRACKER */
   .season-tracker{background:var(--bg-2);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:18px}
   .st-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:10px}
-  .st-head h2{margin:0;font-family:'Bebas Neue';font-size:22px;letter-spacing:2px}
+  .st-head h2{margin:0;font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:22px;letter-spacing:2px}
   .st-meta{display:flex;gap:10px;align-items:center;flex-wrap:wrap;flex:1;justify-content:flex-end}
-  .st-counter{font-family:'JetBrains Mono';font-size:10px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;
+  .st-counter{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;
     background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:5px 9px}
-  .st-counter b{color:var(--accent);font-family:'Bebas Neue';font-size:16px;margin-right:4px;letter-spacing:.5px}
+  .st-counter b{color:var(--accent);font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:16px;margin-right:4px;letter-spacing:.5px}
   .milestones-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
   .milestone{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px;position:relative;
     transition:all .2s;display:flex;flex-direction:column;gap:6px}
   .milestone.unlocked{border-color:var(--gold);background:rgba(244,196,48,.06);box-shadow:0 0 0 1px rgba(244,196,48,.15)}
-  .milestone.unlocked::after{content:"✓";position:absolute;top:8px;right:10px;color:var(--gold);font-family:'Bebas Neue';
+  .milestone.unlocked::after{content:"✓";position:absolute;top:8px;right:10px;color:var(--gold);font-family:'Bebas Neue','Arial Narrow',sans-serif;
     font-size:20px;letter-spacing:1px}
-  .milestone .m-name{font-family:'Bebas Neue';font-size:15px;letter-spacing:1.5px;line-height:1.1}
-  .milestone .m-desc{font-family:'JetBrains Mono';font-size:10px;color:var(--muted);letter-spacing:.3px;line-height:1.4}
+  .milestone .m-name{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:15px;letter-spacing:1.5px;line-height:1.1}
+  .milestone .m-desc{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--muted);letter-spacing:.3px;line-height:1.4}
   .milestone .m-progress{height:5px;background:var(--bg-3);border-radius:3px;overflow:hidden;margin-top:4px}
   .milestone .m-bar{height:100%;background:linear-gradient(90deg,var(--accent),var(--gold));transition:width .4s ease}
   .milestone.unlocked .m-bar{background:var(--gold)}
-  .milestone .m-status{display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono';font-size:10px}
+  .milestone .m-status{display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px}
   .milestone .m-count{color:var(--text);font-weight:700}
   .milestone .m-reward{color:var(--accent);font-weight:700}
   .milestone.unlocked .m-reward{color:var(--gold)}
   /* v5 — toggle manual de marcos */
   .milestone.manual{border-color:var(--accent-2);background:rgba(189,138,90,.06);box-shadow:0 0 0 1px rgba(189,138,90,.15)}
   .milestone.manual::after{content:"✋";color:var(--accent-2)}
-  .m-source{display:inline-block;font-family:'JetBrains Mono';font-size:8px;letter-spacing:1px;
+  .m-source{display:inline-block;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:8px;letter-spacing:1px;
     padding:1px 5px;border-radius:3px;margin-left:6px;vertical-align:middle;font-weight:700}
   .m-source.auto{background:rgba(244,196,48,.15);color:var(--gold);border:1px solid rgba(244,196,48,.3)}
   .m-source.manual{background:rgba(189,138,90,.15);color:var(--accent-2);border:1px solid rgba(189,138,90,.3)}
   .m-toggle{appearance:none;background:var(--bg);border:1px solid var(--line);color:var(--muted);
-    padding:5px 10px;border-radius:6px;font-family:'JetBrains Mono';font-size:9px;letter-spacing:1px;
+    padding:5px 10px;border-radius:6px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:9px;letter-spacing:1px;
     text-transform:uppercase;cursor:pointer;transition:all .15s;font-weight:700;margin-top:6px;width:100%}
   .m-toggle.on:hover{border-color:var(--accent-2);color:var(--accent-2);background:rgba(189,138,90,.06)}
   .m-toggle.off{border-color:var(--red);color:var(--red)}
@@ -261,28 +261,28 @@
   .award-card.has::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),#ffe080)}
   .award-card.has{border-color:rgba(244,196,48,.4);background:linear-gradient(135deg,var(--bg-2),rgba(244,196,48,.04))}
   .award-head{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
-  .award-name{font-family:'Bebas Neue';font-size:18px;letter-spacing:1.5px;line-height:1.1;display:flex;align-items:center;gap:6px}
-  .award-tier{font-family:'JetBrains Mono';font-size:8px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;
+  .award-name{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:18px;letter-spacing:1.5px;line-height:1.1;display:flex;align-items:center;gap:6px}
+  .award-tier{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:8px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;
     padding:2px 5px;border-radius:3px;border:1px solid var(--line);background:var(--bg)}
   .award-tier.gold{color:var(--gold);border-color:rgba(244,196,48,.4);background:rgba(244,196,48,.08)}
   .award-tier.elite{color:var(--accent);border-color:rgba(210,75,62,.4);background:rgba(210,75,62,.08)}
-  .award-desc{font-family:'JetBrains Mono';font-size:10px;color:var(--muted);line-height:1.5;letter-spacing:.2px}
+  .award-desc{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--muted);line-height:1.5;letter-spacing:.2px}
   .award-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;padding-top:8px;border-top:1px solid var(--line)}
   .award-counter{display:flex;align-items:center;gap:8px}
-  .award-counter-num{font-family:'Bebas Neue';font-size:28px;color:var(--gold);letter-spacing:1px;line-height:1;min-width:30px;text-align:center}
+  .award-counter-num{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:28px;color:var(--gold);letter-spacing:1px;line-height:1;min-width:30px;text-align:center}
   .award-card:not(.has) .award-counter-num{color:var(--muted)}
-  .award-counter-lbl{font-family:'JetBrains Mono';font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;line-height:1.2}
-  .award-reward{font-family:'Bebas Neue';font-size:14px;color:var(--accent);letter-spacing:1px}
+  .award-counter-lbl{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;line-height:1.2}
+  .award-reward{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:14px;color:var(--accent);letter-spacing:1px}
   .award-card.has .award-reward{color:var(--gold)}
   .award-actions{display:flex;gap:4px}
   .award-btn{appearance:none;background:var(--bg);border:1px solid var(--line);color:var(--text);
-    width:30px;height:30px;border-radius:7px;cursor:pointer;font-family:'Bebas Neue';font-size:18px;line-height:1;
+    width:30px;height:30px;border-radius:7px;cursor:pointer;font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:18px;line-height:1;
     display:flex;align-items:center;justify-content:center;transition:all .15s}
   .award-btn:hover{border-color:var(--gold);color:var(--gold)}
   .award-btn.plus:hover{border-color:var(--green);color:var(--green)}
   .award-btn.minus:hover{border-color:var(--red);color:var(--red)}
   .award-toggle{appearance:none;background:var(--bg);border:1px solid var(--line);color:var(--muted);
-    padding:6px 12px;border-radius:7px;font-family:'JetBrains Mono';font-size:10px;letter-spacing:1px;
+    padding:6px 12px;border-radius:7px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;letter-spacing:1px;
     text-transform:uppercase;cursor:pointer;transition:all .15s;font-weight:700}
   .award-toggle:hover{border-color:var(--gold)}
   .award-toggle.active{background:var(--gold);color:#1a1106;border-color:var(--gold)}
@@ -293,22 +293,22 @@
     display:flex;flex-direction:column;gap:10px}
   .ag-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);
     padding-bottom:8px;margin-bottom:4px;gap:10px}
-  .ag-title{font-family:'Bebas Neue';font-size:22px;letter-spacing:2px;display:flex;align-items:center;gap:8px}
+  .ag-title{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:22px;letter-spacing:2px;display:flex;align-items:center;gap:8px}
   .ag-title .dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
-  .ag-pool{font-family:'JetBrains Mono';font-size:10px;color:var(--muted);letter-spacing:1px;text-align:right;line-height:1.4}
-  .ag-pool b{color:var(--green);font-size:14px;font-family:'Bebas Neue';letter-spacing:1px}
+  .ag-pool{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--muted);letter-spacing:1px;text-align:right;line-height:1.4}
+  .ag-pool b{color:var(--green);font-size:14px;font-family:'Bebas Neue','Arial Narrow',sans-serif;letter-spacing:1px}
 
   .attr-row{display:grid;grid-template-columns:1fr 50px 50px 70px;gap:8px;align-items:center}
   .attr-name{font-family:'Archivo';font-size:12.5px;font-weight:600;letter-spacing:.2px;display:flex;flex-direction:column;gap:5px;min-width:0}
   .attr-name .nm{display:flex;align-items:center;gap:6px;overflow:hidden}
   .attr-name .nm .name-txt{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .attr-name .nm span.code{font-family:'JetBrains Mono';font-size:9px;color:var(--muted);background:var(--bg);
+  .attr-name .nm span.code{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:9px;color:var(--muted);background:var(--bg);
     padding:1px 5px;border-radius:3px;letter-spacing:.5px;flex-shrink:0;font-weight:400}
-  .attr-name .nm span.peso{font-family:'JetBrains Mono';font-size:9px;color:var(--accent);background:rgba(210,75,62,.08);
+  .attr-name .nm span.peso{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:9px;color:var(--accent);background:rgba(210,75,62,.08);
     padding:1px 5px;border-radius:3px;letter-spacing:.5px;flex-shrink:0;font-weight:400;border:1px solid rgba(210,75,62,.3)}
-  .attr-name .nm span.diff{font-family:'JetBrains Mono';font-size:9px;color:var(--accent-2);background:rgba(189,138,90,.08);
+  .attr-name .nm span.diff{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:9px;color:var(--accent-2);background:rgba(189,138,90,.08);
     padding:1px 5px;border-radius:3px;letter-spacing:.5px;flex-shrink:0;font-weight:400;border:1px solid rgba(189,138,90,.3)}
-  .cost-decomp{font-family:'JetBrains Mono';font-size:8px;color:var(--muted);letter-spacing:.2px;
+  .cost-decomp{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:8px;color:var(--muted);letter-spacing:.2px;
     margin-top:2px;line-height:1.1;opacity:.75}
   .attr-up:hover .cost-decomp{color:var(--accent);opacity:1}
   .attr-bar-wrap{position:relative;height:6px;background:var(--bg);border-radius:3px;overflow:hidden}
@@ -320,26 +320,26 @@
   .attr-bar.t90{background:linear-gradient(90deg,var(--accent-2),#d68bff)}
   .attr-bar.t95{background:linear-gradient(90deg,var(--gold),#ffe080)}
   .attr-input{appearance:none;background:var(--bg);border:1px solid var(--line);color:var(--text);
-    border-radius:6px;padding:4px;text-align:center;font-family:'Bebas Neue';font-size:22px;letter-spacing:1px;
+    border-radius:6px;padding:4px;text-align:center;font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:22px;letter-spacing:1px;
     width:100%;outline:none}
   .attr-input:focus{border-color:var(--accent)}
   .attr-input.t60{color:#cbd5e0} .attr-input.t70{color:var(--blue)}
   .attr-input.t80{color:var(--accent)} .attr-input.t90{color:var(--accent-2)} .attr-input.t95{color:var(--gold)}
-  .attr-val{font-family:'Bebas Neue';font-size:24px;text-align:center;letter-spacing:1px;line-height:1;color:var(--muted)}
+  .attr-val{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:24px;text-align:center;letter-spacing:1px;line-height:1;color:var(--muted)}
   .attr-up{appearance:none;border:1px solid var(--line-2);background:var(--bg);color:var(--text);
     border-radius:8px;padding:5px 4px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:1px;
     transition:all .15s;line-height:1;width:100%}
   .attr-up:hover:not(:disabled){border-color:var(--accent);color:var(--accent);transform:translateY(-1px);box-shadow:0 4px 12px rgba(210,75,62,.15)}
   .attr-up:disabled{opacity:.3;cursor:not-allowed}
-  .attr-up .cost{font-family:'Bebas Neue';font-size:17px;letter-spacing:.5px}
-  .attr-up .lbl{font-family:'JetBrains Mono';font-size:8px;color:var(--muted);letter-spacing:1px}
+  .attr-up .cost{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:17px;letter-spacing:.5px}
+  .attr-up .lbl{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:8px;color:var(--muted);letter-spacing:1px}
   .attr-up:hover:not(:disabled) .lbl{color:var(--accent)}
 
   /* HISTORY */
   .history-list{display:flex;flex-direction:column;gap:8px}
   .game-row{background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:12px 14px;
     display:grid;grid-template-columns:auto 1fr auto auto;gap:14px;align-items:center}
-  .game-row .meta{font-family:'JetBrains Mono';font-size:11px;color:var(--muted);min-width:140px}
+  .game-row .meta{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px;color:var(--muted);min-width:140px}
   .game-row .meta b{color:var(--text);display:block;font-size:12px;font-family:'Archivo';font-weight:700}
   .game-row .meta .res{display:inline-block;padding:1px 6px;border-radius:4px;font-size:10px;margin-left:4px}
   .game-row .meta .res.W{background:rgba(43,212,125,.15);color:var(--green)}
@@ -349,7 +349,7 @@
   .game-row .stat-line b{color:var(--accent)}
   .game-row .stat-line .badge{display:inline-block;background:rgba(244,196,48,.12);color:var(--gold);
     padding:1px 6px;border-radius:4px;font-size:10px;margin-left:4px;letter-spacing:.5px}
-  .game-row .xp{font-family:'Bebas Neue';font-size:22px;color:var(--green);letter-spacing:1px}
+  .game-row .xp{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:22px;color:var(--green);letter-spacing:1px}
   .game-row .del{background:none;border:none;color:var(--muted);cursor:pointer;font-size:18px;padding:4px 8px;border-radius:6px;line-height:1}
   .game-row .del:hover{color:var(--red);background:rgba(255,77,109,.08)}
 
@@ -361,24 +361,24 @@
   .rules-intro p .hl{color:var(--accent);font-weight:700}
   .rules-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
   .rules-card{background:var(--bg-2);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
-  .rules-card h3{margin:0 0 12px 0;font-family:'Bebas Neue';font-size:20px;letter-spacing:2px;color:var(--accent)}
+  .rules-card h3{margin:0 0 12px 0;font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:20px;letter-spacing:2px;color:var(--accent)}
   .rule-row{display:grid;grid-template-columns:1fr auto 1.4fr;gap:10px;align-items:center;padding:7px 0;
     border-bottom:1px dashed var(--line);font-size:12px}
   .rule-row:last-child{border-bottom:none}
-  .rule-row .from{font-family:'JetBrains Mono'}
-  .rule-row .arrow{text-align:center;color:var(--muted);font-family:'JetBrains Mono';font-size:11px}
-  .rule-row .to{font-family:'JetBrains Mono';font-size:11px;color:var(--muted)}
+  .rule-row .from{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace}
+  .rule-row .arrow{text-align:center;color:var(--muted);font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px}
+  .rule-row .to{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px;color:var(--muted)}
   .rule-row .to b{color:var(--green)}
   .tier-table{width:100%;border-collapse:collapse}
-  .tier-table th,.tier-table td{padding:8px 10px;text-align:left;font-family:'JetBrains Mono';font-size:12px;border-bottom:1px solid var(--line)}
+  .tier-table th,.tier-table td{padding:8px 10px;text-align:left;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:12px;border-bottom:1px solid var(--line)}
   .tier-table th{color:var(--muted);font-weight:400;letter-spacing:1px;text-transform:uppercase;font-size:10px}
   .tier-table td b{color:var(--accent)}
 
-  .empty{padding:40px;text-align:center;color:var(--muted);font-family:'JetBrains Mono';font-size:13px}
+  .empty{padding:40px;text-align:center;color:var(--muted);font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:13px}
 
   /* TOAST */
   .toast{position:fixed;bottom:24px;right:24px;background:var(--bg-3);border:1px solid var(--accent);
-    color:var(--text);padding:14px 18px;border-radius:10px;font-family:'JetBrains Mono';font-size:12px;
+    color:var(--text);padding:14px 18px;border-radius:10px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:12px;
     letter-spacing:1px;box-shadow:0 10px 30px rgba(0,0,0,.4);z-index:1000;opacity:0;transform:translateY(20px);
     transition:all .3s ease;pointer-events:none;max-width:360px}
   .toast.show{opacity:1;transform:translateY(0)}
@@ -389,20 +389,20 @@
     display:none;align-items:center;justify-content:center;padding:20px}
   .modal-bg.show{display:flex}
   .modal{background:var(--bg-2);border:1px solid var(--line-2);border-radius:16px;padding:24px;max-width:520px;width:100%}
-  .modal h2{margin:0 0 6px 0;font-family:'Bebas Neue';font-size:28px;letter-spacing:2px}
+  .modal h2{margin:0 0 6px 0;font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:28px;letter-spacing:2px}
   .modal p{margin:0 0 16px 0;color:var(--muted);font-size:13px;line-height:1.5}
   .modal .modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
 
   /* ===== v5.2: HISTORY REFORMULADO ===== */
   .history-tabs{display:flex;gap:2px;margin-bottom:14px;border-bottom:1px solid var(--line);flex-wrap:wrap}
-  .htab{padding:10px 14px;font-family:'Bebas Neue';font-size:15px;letter-spacing:1.5px;
+  .htab{padding:10px 14px;font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:15px;letter-spacing:1.5px;
     color:var(--muted);cursor:pointer;border:none;background:none;border-bottom:2px solid transparent;
     white-space:nowrap;transition:all .15s}
   .htab:hover{color:var(--text)}
   .htab.active{color:var(--accent-2);border-bottom-color:var(--accent-2)}
   .hpanel{display:none}
   .hpanel.active{display:block;animation:fadeIn .2s ease}
-  .hsec-title{font-family:'Bebas Neue';font-size:18px;letter-spacing:2px;color:var(--gold);margin:0 0 10px 0}
+  .hsec-title{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:18px;letter-spacing:2px;color:var(--gold);margin:0 0 10px 0}
   .records-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px}
   .rec-card{background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:10px 12px;
     position:relative;overflow:hidden}
@@ -412,16 +412,16 @@
   .rec-card.reb::before{background:var(--blue)}
   .rec-card.ast::before{background:var(--accent-2)}
   .rec-card.stl::before,.rec-card.blk::before{background:var(--green)}
-  .rec-card .rc-label{font-family:'JetBrains Mono';font-size:9px;color:var(--muted);
+  .rec-card .rc-label{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:9px;color:var(--muted);
     letter-spacing:1.5px;text-transform:uppercase;line-height:1.2}
-  .rec-card .rc-value{font-family:'Bebas Neue';font-size:36px;letter-spacing:1px;color:var(--text);
+  .rec-card .rc-value{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:36px;letter-spacing:1px;color:var(--text);
     line-height:1;margin-top:4px}
-  .rec-card .rc-meta{font-family:'JetBrains Mono';font-size:9px;color:var(--muted);
+  .rec-card .rc-meta{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:9px;color:var(--muted);
     margin-top:4px;letter-spacing:.3px;line-height:1.3}
   .rec-card.empty .rc-value{color:var(--muted);opacity:.4}
   .rc-actions{display:flex;gap:4px;margin-top:6px;padding-top:6px;border-top:1px dashed var(--line)}
   .rc-edit, .rc-clear{flex:1;background:var(--bg);border:1px solid var(--line);color:var(--muted);
-    padding:4px 6px;border-radius:4px;font-family:'JetBrains Mono';font-size:9px;letter-spacing:.5px;
+    padding:4px 6px;border-radius:4px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:9px;letter-spacing:.5px;
     text-transform:uppercase;cursor:pointer;transition:all .15s}
   .rc-edit:hover{border-color:var(--accent);color:var(--accent)}
   .rc-clear{flex:0 0 26px;color:var(--muted)}
@@ -461,16 +461,16 @@
   .tbs-col{background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
   .tbs-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;
     padding-bottom:6px;border-bottom:1px solid var(--line)}
-  .tbs-head span{font-family:'Bebas Neue';font-size:16px;letter-spacing:1.5px;color:var(--gold)}
+  .tbs-head span{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:16px;letter-spacing:1.5px;color:var(--gold)}
   .tbs-add{background:var(--bg);border:1px solid var(--line);color:var(--accent-2);
-    padding:3px 8px;border-radius:5px;font-family:'JetBrains Mono';font-size:9px;letter-spacing:1px;
+    padding:3px 8px;border-radius:5px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:9px;letter-spacing:1px;
     text-transform:uppercase;cursor:pointer;transition:all .15s;font-weight:700}
   .tbs-add:hover{border-color:var(--accent-2);background:rgba(189,138,90,.08)}
   .top-games{display:flex;flex-direction:column;gap:6px}
   .tg-row{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;
     padding:8px 12px;display:grid;grid-template-columns:30px auto 1fr auto;gap:10px;
-    align-items:center;font-family:'JetBrains Mono';font-size:11px}
-  .tg-row .tg-rank{font-family:'Bebas Neue';font-size:22px;color:var(--gold);letter-spacing:1px;line-height:1;text-align:center}
+    align-items:center;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px}
+  .tg-row .tg-rank{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:22px;color:var(--gold);letter-spacing:1px;line-height:1;text-align:center}
   .tg-row .tg-rank.r1{color:var(--gold)}
   .tg-row .tg-rank.r2{color:#c0c0c0}
   .tg-row .tg-rank.r3{color:#cd7f32}
@@ -478,35 +478,35 @@
   .tg-row .tg-date{color:var(--muted);font-size:10px;white-space:nowrap}
   .tg-row .tg-stats{color:var(--text);line-height:1.4}
   .tg-row .tg-stats b{color:var(--accent)}
-  .tg-row .tg-score{font-family:'Bebas Neue';font-size:18px;color:var(--green);letter-spacing:.5px;line-height:1}
+  .tg-row .tg-score{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:18px;color:var(--green);letter-spacing:.5px;line-height:1}
   .tg-row .tg-badges{font-size:9px;color:var(--gold)}
-  .tg-empty{padding:30px;text-align:center;color:var(--muted);font-family:'JetBrains Mono';font-size:12px}
+  .tg-empty{padding:30px;text-align:center;color:var(--muted);font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:12px}
 
   .top-milestones{display:flex;flex-direction:column;gap:8px}
   .tm-row{background:linear-gradient(90deg,rgba(244,196,48,.06),var(--bg-2));border:1px solid rgba(244,196,48,.3);
     border-radius:8px;padding:10px 12px;display:flex;align-items:center;gap:12px}
   .tm-row .tm-icon{font-size:22px;flex-shrink:0}
   .tm-row .tm-body{flex:1}
-  .tm-row .tm-name{font-family:'Bebas Neue';font-size:16px;letter-spacing:1.5px;color:var(--gold);line-height:1.1}
-  .tm-row .tm-desc{font-family:'JetBrains Mono';font-size:10px;color:var(--muted);margin-top:2px}
-  .tm-row .tm-xp{font-family:'Bebas Neue';font-size:22px;color:var(--accent);letter-spacing:1px}
+  .tm-row .tm-name{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:16px;letter-spacing:1.5px;color:var(--gold);line-height:1.1}
+  .tm-row .tm-desc{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--muted);margin-top:2px}
+  .tm-row .tm-xp{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:22px;color:var(--accent);letter-spacing:1px}
 
   .archive-list{display:flex;flex-direction:column;gap:10px}
   .arch-card{background:var(--bg-2);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:border-color .15s}
   .arch-card:hover{border-color:var(--accent)}
   .arch-head{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;
     padding:12px 16px;cursor:pointer;background:rgba(210,75,62,.03)}
-  .arch-head .arch-num{font-family:'Bebas Neue';font-size:30px;color:var(--accent);letter-spacing:1px;line-height:1}
-  .arch-head .arch-info{font-family:'JetBrains Mono';font-size:11px;color:var(--text);line-height:1.5}
+  .arch-head .arch-num{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:30px;color:var(--accent);letter-spacing:1px;line-height:1}
+  .arch-head .arch-info{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px;color:var(--text);line-height:1.5}
   .arch-head .arch-info b{color:var(--gold)}
   .arch-head .arch-info .arch-end{color:var(--muted);font-size:10px;display:block;margin-top:2px}
-  .arch-head .arch-toggle{font-family:'Bebas Neue';font-size:18px;color:var(--muted);transition:transform .2s}
+  .arch-head .arch-toggle{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:18px;color:var(--muted);transition:transform .2s}
   .arch-card.open .arch-toggle{transform:rotate(90deg)}
   .arch-body{padding:0 16px;max-height:0;overflow:hidden;transition:max-height .3s,padding .3s}
   .arch-card.open .arch-body{max-height:9999px;padding:12px 16px;border-top:1px solid var(--line)}
   .arch-stats-summary{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
-  .arch-stat{font-family:'JetBrains Mono';font-size:10px;color:var(--muted);padding:3px 8px;background:var(--bg);border-radius:4px}
-  .arch-stat b{color:var(--accent);font-family:'Bebas Neue';font-size:13px;letter-spacing:.5px;margin-right:3px}
+  .arch-stat{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--muted);padding:3px 8px;background:var(--bg);border-radius:4px}
+  .arch-stat b{color:var(--accent);font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:13px;letter-spacing:.5px;margin-right:3px}
 
   /* ===== v5.2: PAINEL DE CARREIRA ===== */
   .career-panel{background:linear-gradient(135deg,var(--bg-2),var(--bg-3));border:1px solid var(--line);
@@ -515,21 +515,21 @@
     radial-gradient(300px 150px at 100% 0%,rgba(244,196,48,.07),transparent 60%);pointer-events:none}
   .career-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;
     flex-wrap:wrap;gap:10px;position:relative;z-index:1}
-  .career-title{font-family:'Bebas Neue';font-size:22px;letter-spacing:2px;color:var(--gold)}
+  .career-title{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:22px;letter-spacing:2px;color:var(--gold)}
   .career-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-  .career-season-tag{font-family:'JetBrains Mono';font-size:11px;color:var(--accent);background:rgba(210,75,62,.08);
+  .career-season-tag{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px;color:var(--accent);background:rgba(210,75,62,.08);
     border:1px solid rgba(210,75,62,.3);padding:5px 10px;border-radius:6px;letter-spacing:1px}
-  .career-phase-tag{font-family:'JetBrains Mono';font-size:10px;letter-spacing:1.5px;
+  .career-phase-tag{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;letter-spacing:1.5px;
     padding:5px 10px;border-radius:6px;font-weight:700}
   .career-phase-tag.regular{color:var(--muted);background:rgba(122,132,153,.1);border:1px solid var(--line)}
   .career-phase-tag.playoffs{color:var(--gold);background:rgba(244,196,48,.12);border:1px solid rgba(244,196,48,.5);
     box-shadow:0 0 12px rgba(244,196,48,.2)}
   .career-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;position:relative;z-index:1}
   .career-stat{background:rgba(0,0,0,.2);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
-  .career-stat .cs-label{font-family:'JetBrains Mono';font-size:9px;color:var(--muted);
+  .career-stat .cs-label{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:9px;color:var(--muted);
     letter-spacing:1.5px;text-transform:uppercase;line-height:1.2}
-  .career-stat .cs-value{font-family:'Bebas Neue';font-size:24px;letter-spacing:1px;color:var(--text);line-height:1;margin-top:2px}
-  .career-stat .cs-meta{font-family:'JetBrains Mono';font-size:8.5px;color:var(--muted);letter-spacing:.3px;
+  .career-stat .cs-value{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:24px;letter-spacing:1px;color:var(--text);line-height:1;margin-top:2px}
+  .career-stat .cs-meta{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:8.5px;color:var(--muted);letter-spacing:.3px;
     margin-top:2px;opacity:.8;line-height:1.2}
   .career-stat.gold .cs-value{color:var(--gold)}
   .career-stat.green .cs-value{color:var(--green)}
@@ -546,14 +546,14 @@
     radial-gradient(400px 200px at 100% 100%,rgba(189,138,90,.10),transparent 60%);pointer-events:none}
   .about-logo{width:80px;height:80px;border-radius:18px;background:linear-gradient(135deg,var(--accent),#d98a5a);
     display:grid;place-items:center;box-shadow:0 8px 28px rgba(210,75,62,.35);
-    font-family:'Bebas Neue';font-size:48px;color:#1a1106;letter-spacing:1px;flex-shrink:0;z-index:1}
-  .about-hero h2{margin:0;font-family:'Bebas Neue';font-size:32px;letter-spacing:3px;line-height:1}
-  .about-version{font-family:'JetBrains Mono';font-size:11px;color:var(--accent);letter-spacing:2px;
+    font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:48px;color:#1a1106;letter-spacing:1px;flex-shrink:0;z-index:1}
+  .about-hero h2{margin:0;font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:32px;letter-spacing:3px;line-height:1}
+  .about-version{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px;color:var(--accent);letter-spacing:2px;
     text-transform:uppercase;margin-top:6px;font-weight:700}
   .about-tagline{font-family:'Archivo';font-size:13px;color:var(--muted);margin-top:6px;line-height:1.5}
   .about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px}
   .about-card{background:var(--bg-2);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
-  .about-card h3{margin:0 0 12px 0;font-family:'Bebas Neue';font-size:20px;letter-spacing:2px;color:var(--accent)}
+  .about-card h3{margin:0 0 12px 0;font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:20px;letter-spacing:2px;color:var(--accent)}
   .about-card p{margin:0;font-family:'Archivo';font-size:13px;color:var(--muted);line-height:1.65}
   .about-card p b{color:var(--text)}
   .about-card ul{margin:0;padding-left:18px;font-family:'Archivo';font-size:12.5px;color:var(--muted);line-height:1.7}
@@ -561,14 +561,14 @@
   .about-card ul li b{color:var(--text)}
   .changelog{display:flex;flex-direction:column;gap:8px}
   .cl-entry{padding:10px 12px;background:var(--bg);border:1px solid var(--line);border-radius:8px;
-    font-family:'JetBrains Mono';font-size:11.5px;color:var(--muted);line-height:1.5;letter-spacing:.2px}
-  .cl-entry b{color:var(--accent);font-family:'Bebas Neue';font-size:16px;letter-spacing:1.5px;margin-right:6px}
+    font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11.5px;color:var(--muted);line-height:1.5;letter-spacing:.2px}
+  .cl-entry b{color:var(--accent);font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:16px;letter-spacing:1.5px;margin-right:6px}
 
   /* ===== v5: BADGES PANEL ===== */
   .badges-summary{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
   .badges-summary .bsum{background:var(--bg-2);border:1px solid var(--line);border-radius:10px;
-    padding:8px 12px;display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono';font-size:11px}
-  .badges-summary .bsum b{font-family:'Bebas Neue';font-size:20px;letter-spacing:1px;line-height:1}
+    padding:8px 12px;display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px}
+  .badges-summary .bsum b{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:20px;letter-spacing:1px;line-height:1}
   .badges-summary .bsum.bronze b{color:#cd7f32}
   .badges-summary .bsum.silver b{color:#c0c0c0}
   .badges-summary .bsum.gold b{color:var(--gold)}
@@ -576,18 +576,18 @@
   .badges-summary .bsum.legend b{color:var(--accent)}
   .badges-filters{display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap;align-items:center}
   .badges-filters input[type="text"]{flex:1;min-width:200px;background:var(--bg-2);border:1px solid var(--line);color:var(--text);
-    padding:10px 14px;border-radius:10px;font-family:'JetBrains Mono';font-size:12px;outline:none}
+    padding:10px 14px;border-radius:10px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:12px;outline:none}
   .badges-filters input[type="text"]:focus{border-color:var(--accent-2)}
   .badges-toggle{display:flex;align-items:center;gap:6px;background:var(--bg-2);border:1px solid var(--line);
-    padding:8px 12px;border-radius:10px;font-family:'JetBrains Mono';font-size:10px;color:var(--muted);
+    padding:8px 12px;border-radius:10px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--muted);
     letter-spacing:1px;text-transform:uppercase;cursor:pointer}
   .badges-toggle input{margin:0}
   .badges-by-cat{display:flex;flex-direction:column;gap:18px}
   .badge-cat{background:var(--bg-2);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
   .badge-cat-head{display:flex;justify-content:space-between;align-items:baseline;
     margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--line)}
-  .badge-cat-name{font-family:'Bebas Neue';font-size:20px;letter-spacing:2px}
-  .badge-cat-meta{font-family:'JetBrains Mono';font-size:10px;color:var(--muted);letter-spacing:1px}
+  .badge-cat-name{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:20px;letter-spacing:2px}
+  .badge-cat-meta{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--muted);letter-spacing:1px}
   .badge-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
   .badge-card{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:11px 12px;
     display:flex;flex-direction:column;gap:6px;position:relative;transition:border-color .2s}
@@ -599,12 +599,12 @@
   .badge-card.hof{border-color:rgba(189,138,90,.5);box-shadow:inset 3px 0 0 var(--accent-2);background:linear-gradient(90deg,rgba(189,138,90,.06),var(--bg))}
   .badge-card.legend{border-color:rgba(210,75,62,.5);box-shadow:inset 3px 0 0 var(--accent);background:linear-gradient(90deg,rgba(210,75,62,.07),var(--bg))}
   .badge-head{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
-  .badge-name{font-family:'Bebas Neue';font-size:18px;letter-spacing:1.5px;line-height:1.1}
-  .badge-logic{font-family:'JetBrains Mono';font-size:8px;color:var(--muted);background:var(--bg-2);
+  .badge-name{font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:18px;letter-spacing:1.5px;line-height:1.1}
+  .badge-logic{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:8px;color:var(--muted);background:var(--bg-2);
     padding:1px 5px;border-radius:3px;letter-spacing:1px;border:1px solid var(--line)}
   .badge-logic.OR{color:var(--blue);border-color:rgba(78,168,255,.3)}
   .badge-logic.AND{color:var(--accent-2);border-color:rgba(189,138,90,.3)}
-  .badge-tier-tag{font-family:'JetBrains Mono';font-size:9px;letter-spacing:1px;text-transform:uppercase;
+  .badge-tier-tag{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:9px;letter-spacing:1px;text-transform:uppercase;
     padding:2px 7px;border-radius:4px;font-weight:700;flex-shrink:0}
   .badge-tier-tag.locked{background:rgba(122,132,153,.1);color:var(--muted);border:1px solid var(--line)}
   .badge-tier-tag.bronze{background:rgba(205,127,50,.15);color:#cd7f32;border:1px solid rgba(205,127,50,.4)}
@@ -620,22 +620,22 @@
   .badge-pip.f2{background:var(--gold)}
   .badge-pip.f3{background:var(--accent-2)}
   .badge-pip.f4{background:var(--accent)}
-  .badge-next{font-family:'JetBrains Mono';font-size:10px;color:var(--muted);line-height:1.4;margin-top:2px}
+  .badge-next{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--muted);line-height:1.4;margin-top:2px}
   .badge-next b{color:var(--accent);font-weight:700}
   .badge-next.ready b{color:var(--green)}
   .badge-next.height{color:var(--red)}
-  .badge-height{font-family:'JetBrains Mono';font-size:9px;color:var(--muted);letter-spacing:.5px}
+  .badge-height{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:9px;color:var(--muted);letter-spacing:.5px}
   .badge-card.hidden{display:none}
   .badge-cat.hidden{display:none}
   /* v5.2: estados USANDO */
   .badge-using-row{display:flex;align-items:center;gap:6px;margin-top:6px;padding-top:6px;border-top:1px dashed var(--line);flex-wrap:wrap}
-  .badge-state{font-family:'JetBrains Mono';font-size:9px;letter-spacing:.5px;padding:2px 6px;border-radius:4px;font-weight:700;flex-shrink:0}
+  .badge-state{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:9px;letter-spacing:.5px;padding:2px 6px;border-radius:4px;font-weight:700;flex-shrink:0}
   .badge-state.legit{color:var(--green);background:rgba(43,212,125,.1);border:1px solid rgba(43,212,125,.4)}
   .badge-state.available{color:var(--gold);background:rgba(244,196,48,.1);border:1px solid rgba(244,196,48,.4)}
   .badge-state.penalty{color:var(--red);background:rgba(255,77,109,.1);border:1px solid rgba(255,77,109,.4)}
   .badge-state.locked{color:var(--muted);background:rgba(122,132,153,.1);border:1px solid var(--line)}
   .badge-using-sel{flex:1;min-width:140px;background:var(--bg-2);border:1px solid var(--line);color:var(--text);
-    padding:4px 6px;border-radius:5px;font-family:'JetBrains Mono';font-size:10px;outline:none;cursor:pointer}
+    padding:4px 6px;border-radius:5px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;outline:none;cursor:pointer}
   .badge-using-sel:hover{border-color:var(--accent-2)}
   .badge-card.state-pago_pedagio,.badge-card.state-pago_bloqueado{box-shadow:inset 3px 0 0 var(--red)}
   .badge-card.state-liberado_naomarcou{box-shadow:inset 3px 0 0 var(--gold)}
@@ -643,7 +643,7 @@
   /* ===== v4: SAVE STATUS BAR (sempre visível) ===== */
   .save-bar{position:sticky;top:0;z-index:50;background:rgba(8,9,13,.92);backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);padding:8px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;
-    font-family:'JetBrains Mono';font-size:11px;letter-spacing:.5px;margin:-28px -22px 16px}
+    font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px;letter-spacing:.5px;margin:-28px -22px 16px}
   .save-status{display:flex;align-items:center;gap:8px;padding:4px 10px;border-radius:6px;border:1px solid var(--line)}
   .save-dot{width:8px;height:8px;border-radius:50%;background:var(--muted);transition:background .2s}
   .save-status.ok .save-dot{background:var(--green);box-shadow:0 0 8px var(--green)}
@@ -654,10 +654,10 @@
   .save-status.error{color:var(--red);border-color:rgba(255,77,109,.3);background:rgba(255,77,109,.05)}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
   .save-path{color:var(--muted);font-size:10px;max-width:380px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .save-path b{color:var(--accent);font-family:'JetBrains Mono';font-weight:700}
+  .save-path b{color:var(--accent);font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-weight:700}
   .save-actions{display:flex;gap:6px;margin-left:auto}
   .save-btn{appearance:none;background:var(--bg-2);border:1px solid var(--line-2);color:var(--text);
-    padding:5px 10px;border-radius:6px;font-family:'JetBrains Mono';font-size:10px;letter-spacing:1px;
+    padding:5px 10px;border-radius:6px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;letter-spacing:1px;
     text-transform:uppercase;cursor:pointer;transition:all .15s;font-weight:700}
   .save-btn:hover{border-color:var(--accent);color:var(--accent)}
   .save-btn.primary{background:var(--accent);color:#1a1106;border-color:var(--accent)}
@@ -670,23 +670,23 @@
   /* ===== v4: BUILD PRESET ===== */
   .preset-bar{display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,rgba(189,138,90,.08),rgba(210,75,62,.05));
     border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:18px;flex-wrap:wrap}
-  .preset-bar .pb-lbl{font-family:'JetBrains Mono';font-size:11px;color:var(--accent-2);letter-spacing:1.5px;text-transform:uppercase}
+  .preset-bar .pb-lbl{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px;color:var(--accent-2);letter-spacing:1.5px;text-transform:uppercase}
   .preset-bar select{background:var(--bg);border:1px solid var(--line-2);color:var(--text);
-    padding:8px 12px;border-radius:8px;font-family:'JetBrains Mono';font-size:11px;outline:none;min-width:240px}
+    padding:8px 12px;border-radius:8px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px;outline:none;min-width:240px}
   .preset-bar select:focus{border-color:var(--accent-2)}
-  .preset-bar .pb-desc{font-size:10px;color:var(--muted);font-family:'JetBrains Mono';max-width:480px;line-height:1.4}
-  .preset-bar .pb-apply{background:var(--accent-2);color:#fff;border:none;padding:8px 14px;border-radius:8px;
-    font-family:'JetBrains Mono';font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;font-weight:700}
+  .preset-bar .pb-desc{font-size:10px;color:var(--muted);font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;max-width:480px;line-height:1.4}
+  .preset-bar .pb-apply{background:var(--accent-2);color:#1a1106;border:none;padding:8px 14px;border-radius:8px;
+    font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;font-weight:700}
   .preset-bar .pb-apply:hover{filter:brightness(1.15)}
   .preset-bar .pb-apply:disabled{opacity:.4;cursor:not-allowed}
 
   /* ===== v4: QUICK ACTIONS no LOG GAME ===== */
   .quick-actions{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;padding:10px;background:rgba(210,75,62,.04);
     border:1px dashed rgba(210,75,62,.25);border-radius:10px}
-  .quick-actions .qa-lbl{font-family:'JetBrains Mono';font-size:10px;color:var(--muted);letter-spacing:1.5px;
+  .quick-actions .qa-lbl{font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--muted);letter-spacing:1.5px;
     text-transform:uppercase;align-self:center;margin-right:6px}
   .quick-btn{appearance:none;background:var(--bg);border:1px solid var(--line-2);color:var(--text);
-    padding:5px 10px;border-radius:6px;font-family:'JetBrains Mono';font-size:10px;letter-spacing:.5px;
+    padding:5px 10px;border-radius:6px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;letter-spacing:.5px;
     cursor:pointer;transition:all .15s}
   .quick-btn:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
 
@@ -696,14 +696,14 @@
   .attr-input-wrap:focus-within{border-color:var(--accent)}
   .attr-input-wrap .attr-input{border:none;background:transparent;width:38px;font-size:20px;padding:4px 2px}
   .attr-pm{appearance:none;background:transparent;border:none;color:var(--muted);width:18px;height:28px;
-    cursor:pointer;font-family:'Bebas Neue';font-size:16px;line-height:1;padding:0;transition:color .1s}
+    cursor:pointer;font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:16px;line-height:1;padding:0;transition:color .1s}
   .attr-pm:hover{color:var(--accent)}
   .attr-cap-warn{color:var(--red) !important;border-color:var(--red) !important}
 
   /* ===== v4: SEARCH attr filter ===== */
   .attr-search{display:flex;gap:8px;margin-bottom:14px;align-items:center}
   .attr-search input{flex:1;background:var(--bg-2);border:1px solid var(--line);color:var(--text);
-    padding:10px 14px;border-radius:10px;font-family:'JetBrains Mono';font-size:12px;outline:none}
+    padding:10px 14px;border-radius:10px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:12px;outline:none}
   .attr-search input:focus{border-color:var(--accent)}
   .attr-row.hidden{display:none}
   .attr-group.hidden{display:none}
@@ -719,6 +719,9 @@
     .attr-name .nm span.code{font-size:8px;padding:1px 4px}
     .attr-name{font-size:12px}
     .cost-decomp{display:none}                   /* decomposição de custo só no desktop */
+    /* v9 fix — alvo de toque dos botões +/- (era 18×28px, longe do mínimo de ~40px) */
+    .attr-pm{width:32px;height:40px;font-size:20px}
+    .attr-input-wrap .attr-input{width:34px}
   }
 
   @media (max-width:900px){
@@ -831,11 +834,11 @@
       </div>
       <!-- v5: sliders escondidos atrás de "⚙ ajustar corpo" -->
       <details style="margin-top:8px">
-        <summary style="font-family:'JetBrains Mono';font-size:10px;color:var(--muted);cursor:pointer;letter-spacing:1px;text-transform:uppercase">⚙ ajustar corpo (avançado)</summary>
+        <summary style="font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--muted);cursor:pointer;letter-spacing:1px;text-transform:uppercase">⚙ ajustar corpo (avançado)</summary>
         <div style="display:grid;grid-template-columns:auto 1fr;gap:6px 10px;align-items:center;margin-top:8px;padding:8px;background:rgba(189,138,90,.04);border-radius:8px">
-          <span style="font-family:'JetBrains Mono';font-size:10px;color:var(--muted)">🐍 Fluidez ↔ 💪 Potência</span>
+          <span style="font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--muted)">🐍 Fluidez ↔ 💪 Potência</span>
           <input type="range" id="stylePower" min="-100" max="100" value="-60" style="width:100%" />
-          <span style="font-family:'JetBrains Mono';font-size:10px;color:var(--muted)">🎯 Perímetro ↔ 🏗 Garrafão</span>
+          <span style="font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--muted)">🎯 Perímetro ↔ 🏗 Garrafão</span>
           <input type="range" id="styleZone" min="-100" max="100" value="-10" style="width:100%" />
         </div>
       </details>
@@ -870,7 +873,7 @@
       </div>
     </div>
     <div class="stat-filter" id="statFilterWrap" style="display:none">
-      <span style="font-family:'JetBrains Mono';font-size:10px;color:var(--muted);letter-spacing:.5px;align-self:center">VER:</span>
+      <span style="font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--muted);letter-spacing:.5px;align-self:center">VER:</span>
       <button class="sf-btn active" id="sf-all" onclick="setStatFilter('all')">TOTAL</button>
       <button class="sf-btn" id="sf-regular" onclick="setStatFilter('regular')">📅 REGULAR</button>
       <button class="sf-btn" id="sf-playoffs" onclick="setStatFilter('playoffs')">🏆 PLAYOFFS</button>
@@ -944,13 +947,13 @@
           <label style="margin-left:6px">DERROTAS</label>
           <input type="number" id="compiledL" min="0" max="82" placeholder="4" style="width:60px" />
           <button type="button" class="quick-btn" onclick="incCompiled('L',1)" title="+1 D">+1D</button>
-          <span style="margin-left:8px;font-family:'JetBrains Mono';font-size:11px;color:var(--accent-2)">= <b id="compiledNDisplay">0</b> jogos</span>
+          <span style="margin-left:8px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px;color:var(--accent-2)">= <b id="compiledNDisplay">0</b> jogos</span>
           <input type="hidden" id="compiledN" value="0" />
           <div style="width:100%;display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding-top:8px;border-top:1px dashed rgba(189,138,90,.2);margin-top:4px">
-            <span style="font-family:'JetBrains Mono';font-size:10px;color:var(--accent-2);letter-spacing:1px;text-transform:uppercase">📌 FEITOS REAIS (média não detecta):</span>
-            <label style="display:flex;align-items:center;gap:4px;font-family:'JetBrains Mono';font-size:10px;color:var(--muted)">DD <input type="number" id="compiledDD" min="0" placeholder="0" style="width:48px"/></label>
-            <label style="display:flex;align-items:center;gap:4px;font-family:'JetBrains Mono';font-size:10px;color:var(--muted)">TD <input type="number" id="compiledTD" min="0" placeholder="0" style="width:48px"/></label>
-            <label style="display:flex;align-items:center;gap:4px;font-family:'JetBrains Mono';font-size:10px;color:var(--muted)">Maior PTS num jogo <input type="number" id="compiledHighPts" min="0" placeholder="ex: 42" style="width:60px"/></label>
+            <span style="font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--accent-2);letter-spacing:1px;text-transform:uppercase">📌 FEITOS REAIS (média não detecta):</span>
+            <label style="display:flex;align-items:center;gap:4px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--muted)">DD <input type="number" id="compiledDD" min="0" placeholder="0" style="width:48px"/></label>
+            <label style="display:flex;align-items:center;gap:4px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--muted)">TD <input type="number" id="compiledTD" min="0" placeholder="0" style="width:48px"/></label>
+            <label style="display:flex;align-items:center;gap:4px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--muted)">Maior PTS num jogo <input type="number" id="compiledHighPts" min="0" placeholder="ex: 42" style="width:60px"/></label>
           </div>
         </div>
       </div>
@@ -977,7 +980,7 @@
 
       <!-- BÔNUS DETALHADOS -->
       <details class="bonus-breakdown" id="bonusBreakdown" style="display:none">
-        <summary class="bb-head" style="cursor:pointer;list-style:none;user-select:none">🎁 BÔNUS APLICADOS NESSE JOGO <span style="font-size:10px;font-family:'JetBrains Mono';color:var(--muted);letter-spacing:0">— toca pra abrir/fechar</span></summary>
+        <summary class="bb-head" style="cursor:pointer;list-style:none;user-select:none">🎁 BÔNUS APLICADOS NESSE JOGO <span style="font-size:10px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;color:var(--muted);letter-spacing:0">— toca pra abrir/fechar</span></summary>
         <div class="bb-list" id="bonusList"></div>
       </details>
     </div>
@@ -995,7 +998,7 @@
         </div>
       </div>
       <details class="st-details" open>
-        <summary style="font-family:'JetBrains Mono';font-size:10px;color:var(--muted);cursor:pointer;letter-spacing:1px;text-transform:uppercase;padding:4px 0;user-select:none">▾ mostrar / ocultar marcos</summary>
+        <summary style="font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--muted);cursor:pointer;letter-spacing:1px;text-transform:uppercase;padding:4px 0;user-select:none">▾ mostrar / ocultar marcos</summary>
         <div class="milestones-grid" id="milestonesGrid"></div>
       </details>
     </div>
@@ -1013,7 +1016,7 @@
     <!-- v9 — RADAR DO BUILD (média dos atributos por categoria) -->
     <div id="radarWrap" style="display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-bottom:14px;padding:12px 16px;background:rgba(189,138,90,.04);border:1px solid rgba(189,138,90,.15);border-radius:10px">
       <canvas id="radarCanvas" width="260" height="220" style="max-width:100%"></canvas>
-      <div id="radarLegend" style="font-family:'JetBrains Mono';font-size:11px;color:var(--muted);display:flex;flex-direction:column;gap:4px"></div>
+      <div id="radarLegend" style="font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px;color:var(--muted);display:flex;flex-direction:column;gap:4px"></div>
     </div>
 
     <!-- v4: BUILD PRESETS (NBA 2K26) -->
@@ -1060,7 +1063,7 @@
     <div style="margin-bottom:14px;padding:12px 16px;background:rgba(244,196,48,.06);border:1px solid rgba(244,196,48,.25);
       border-radius:10px;font-size:12.5px;color:var(--muted);line-height:1.55">
       <b style="color:var(--gold)">🏆 PRÊMIOS INDIVIDUAIS:</b> marque cada prêmio que você conquistou.
-      Cada um libera um <b style="color:var(--gold)">bônus de XP único</b> distribuído entre as 6 categorias. Prêmios anuais
+      Cada um libera um <b style="color:var(--gold)">bônus de XP único</b> distribuído entre as 5 categorias. Prêmios anuais
       (MVP, DPOY, ROY, etc) podem ser conquistados <b>uma vez por temporada</b> — o contador soma quantas vezes você ganhou na carreira.
     </div>
 
@@ -1119,7 +1122,7 @@
     <!-- Sub-painel 2: TOP REGISTROS (5 estatísticas + toggle SÓ PLAYOFFS) -->
     <div class="hpanel" id="hp-topgames">
       <div class="top-stat-controls">
-        <div style="font-size:11.5px;color:var(--muted);font-family:'JetBrains Mono';line-height:1.5;flex:1;min-width:240px">
+        <div style="font-size:11.5px;color:var(--muted);font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;line-height:1.5;flex:1;min-width:240px">
           🏅 TOP 10 por estatística (carreira inteira). Use <b style="color:var(--accent-2)">+ adicionar</b> pra registros antigos sem XP.
         </div>
         <label class="badges-toggle" style="background:rgba(244,196,48,.08);border-color:rgba(244,196,48,.4);color:var(--gold)">
@@ -1183,7 +1186,7 @@
       </div>
       <div class="rules-card">
         <h3>📈 MOTOR DE CUSTO (v5.1 — 4 FATORES + MODOS)</h3>
-        <p style="font-family:'JetBrains Mono';font-size:11px;color:var(--muted);margin:0 0 10px 0;line-height:1.5">
+        <p style="font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px;color:var(--muted);margin:0 0 10px 0;line-height:1.5">
           Custo = <b style="color:var(--accent)">BASE × DIFICULDADE × BIOTIPO × ARQUÉTIPO</b>.
           O <b>MODO</b> (selecionável no topo) calibra a curva, XP por jogo, marcos, awards e compilado.
         </p>
@@ -1197,12 +1200,12 @@
           <tr><td>95 → 96</td><td>~196</td><td><b>~363</b></td><td>~547</td></tr>
           <tr><td>98 → 99</td><td>~251</td><td><b>~483</b></td><td>~775</td></tr>
         </table>
-        <p style="font-family:'JetBrains Mono';font-size:10px;color:var(--muted);margin:8px 0 0 0;line-height:1.6">
+        <p style="font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--muted);margin:8px 0 0 0;line-height:1.6">
           <b style="color:var(--green)">CASUAL:</b> evolução rápida (~7-8 temporadas até pico). Bom pra teste.<br>
           <b style="color:var(--gold)">REALISTA (default):</b> NBA típico (~12-15 temporadas até pico). XP base ×0.85, marcos ×0.5, compilado amortizado.<br>
           <b style="color:var(--red)">SIMULAÇÃO NBA:</b> brutal (~25+ temporadas). XP base ×0.6, marcos ×0.25, compilado fortemente amortizado. <b>Ninguém vira 99 em tudo.</b>
         </p>
-        <p style="font-family:'JetBrains Mono';font-size:10px;color:var(--muted);margin:8px 0 0 0;line-height:1.5">
+        <p style="font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--muted);margin:8px 0 0 0;line-height:1.5">
           🦅 <b>WINGSPAN</b> (envergadura) barateia atributos sensíveis a alcance: Block, ID, Steal, Rebound.<br>
           🏃 <b>ARQUÉTIPO</b> (corpo): Curry (fluido+perímetro) barateia 3PT/Speed; Shaq (potente+garrafão) barateia Strength/Block.
         </p>
@@ -1302,7 +1305,7 @@
         <div class="about-card" style="grid-column:1/-1;background:linear-gradient(135deg,rgba(210,75,62,.08),rgba(189,138,90,.05))">
           <h3>👤 PROJETO PESSOAL</h3>
           <p style="margin:0">Feito para o jogador. <b>Tudo roda offline</b>, sem servidor, sem login. O save é seu — exporte JSON quando quiser. Use a versão de arquivo vinculado pra gravar direto na rede ou disco.</p>
-          <p style="margin:8px 0 0 0;font-family:'JetBrains Mono';font-size:11px;color:var(--muted)">Filosofia: simplicidade pro usuário, complexidade nas fórmulas · nada deduzido errado · valores derivados, não chutados.</p>
+          <p style="margin:8px 0 0 0;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px;color:var(--muted)">Filosofia: simplicidade pro usuário, complexidade nas fórmulas · nada deduzido errado · valores derivados, não chutados.</p>
         </div>
       </div>
     </div>
@@ -1314,10 +1317,10 @@
       <h2>📋 COLAR STATS DO JOGO</h2>
       <p>Cole o texto extraído pelo Gemini (ou digite no formato livre). O parser entende vários formatos — listas, tabelas, JSON, frases corridas.</p>
       <textarea id="pasteArea" rows="9" style="width:100%;background:var(--bg);border:1px solid var(--line);
-        color:var(--text);padding:12px;border-radius:10px;font-family:'JetBrains Mono';font-size:12px;
+        color:var(--text);padding:12px;border-radius:10px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:12px;
         outline:none;resize:vertical;line-height:1.5"
         placeholder="Exemplos que funcionam:&#10;&#10;PTS: 24, REB: 7, AST: 9, STL: 2, BLK: 1, MIN: 34, TO: 3, FG%: 48&#10;&#10;OU:&#10;Points 24&#10;Rebounds 7&#10;Assists 9&#10;Steals 2&#10;Blocks 1&#10;&#10;OU:&#10;24 pts, 7 reb, 9 ast, 2 stl, 1 blk, vs LAL, W"></textarea>
-      <div style="margin-top:10px;font-size:11px;color:var(--muted);font-family:'JetBrains Mono'">
+      <div style="margin-top:10px;font-size:11px;color:var(--muted);font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace">
         💡 1 jogo: "extraia as stats em chave:valor (PTS, REB, AST...)". <b style="color:var(--accent-2)">Vários jogos (foto da tabela):</b> peça ao Gemini "transcreva a tabela, UMA LINHA POR JOGO: DATA | OPP | W ou L | PLACAR | MIN | PTS | REB | AST | STL | BLK | TO | FGM-FGA" — cola aqui e o app registra todos de uma vez.
       </div>
       <div class="modal-actions">
@@ -1347,10 +1350,10 @@
       <h2>🎯 COLAR ATRIBUTOS DO 2K26</h2>
       <p>Dê print da tela <b>MyPLAYER Builder</b> do 2K26, jogue no Gemini/ChatGPT pedindo: <i>"extraia cada atributo no formato nome: valor"</i> — e cole abaixo. O parser entende PT e EN, sobrepondo nomes longos primeiro (não confunde "Speed" com "Speed With Ball").</p>
       <textarea id="attrPasteArea" rows="9" style="width:100%;background:var(--bg);border:1px solid var(--line);
-        color:var(--text);padding:12px;border-radius:10px;font-family:'JetBrains Mono';font-size:12px;
+        color:var(--text);padding:12px;border-radius:10px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:12px;
         outline:none;resize:vertical;line-height:1.5"
         placeholder="Exemplos que funcionam:&#10;&#10;Close Shot: 85&#10;Driving Layup: 90&#10;Three-Point Shot: 88&#10;Speed With Ball: 82&#10;Speed: 76&#10;Block: 84&#10;...&#10;&#10;OU em PT:&#10;Velocidade: 76&#10;Drible: 82&#10;Três Pontos: 88&#10;Bloqueio: 84"></textarea>
-      <div style="margin-top:10px;font-size:11px;color:var(--muted);font-family:'JetBrains Mono'">
+      <div style="margin-top:10px;font-size:11px;color:var(--muted);font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace">
         💡 Cobre os 37 atributos. Preview antes de aplicar — você confirma o que vai mudar.
       </div>
       <div id="attrPreviewArea" style="margin-top:12px;display:none;max-height:300px;overflow-y:auto;border:1px solid var(--line);border-radius:8px;padding:10px;background:var(--bg)"></div>
@@ -1377,9 +1380,9 @@
   <!-- v6: OCR OVERLAY -->
   <div id="ocrOverlay" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(5,7,11,.88);
     align-items:center;justify-content:center;flex-direction:column;gap:14px;text-align:center;padding:24px">
-    <div style="font-family:'Bebas Neue';font-size:30px;letter-spacing:2px;color:var(--text)">📷 LENDO STATS…</div>
-    <div id="ocrPct" style="font-family:'JetBrains Mono';font-size:18px;color:var(--accent);font-weight:700">0%</div>
-    <div style="font-family:'JetBrains Mono';font-size:10px;color:var(--muted);max-width:280px;line-height:1.5">
+    <div style="font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:30px;letter-spacing:2px;color:var(--text)">📷 LENDO STATS…</div>
+    <div id="ocrPct" style="font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:18px;color:var(--accent);font-weight:700">0%</div>
+    <div style="font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--muted);max-width:280px;line-height:1.5">
       Na 1ª vez baixa o motor de OCR (uns segundos, precisa de internet). Depois fica em cache no navegador.</div>
   </div>
 
@@ -1391,7 +1394,7 @@
 // ============================================================
 // v7.1 — CONSTANTES GLOBAIS + HELPERS DE SEGURANÇA
 // ============================================================
-const APP_VERSION = 'v7.1';
+const APP_VERSION = 'v9';
 
 // Escapa HTML em qualquer dado de usuário antes de cair em innerHTML.
 // Protege contra save compartilhado (#save=) ou JSON importado com payload malicioso.
@@ -1414,8 +1417,11 @@ function sanitizeLoadedState(loaded){
 
   if (loaded.attrs && typeof loaded.attrs === 'object'){
     for (const k in loaded.attrs){
-      const n = num(loaded.attrs[k], 25, 99);
-      loaded.attrs[k] = n || 60;
+      // v9 fix — clampa em [0,99] coerente com a UI (input min=0). Antes cravava piso
+      // 25, elevando silenciosamente atributos baixos legítimos (ex: 3PT=20 de um Center)
+      // a cada load. Só cai no default 60 se o valor for inválido/ausente.
+      const raw = +loaded.attrs[k];
+      loaded.attrs[k] = Number.isFinite(raw) ? Math.max(0, Math.min(99, raw)) : 60;
     }
   }
   if (loaded.pools && typeof loaded.pools === 'object'){
@@ -1982,7 +1988,7 @@ const CAT_INFO = {
 };
 
 // --- DEFINIÇÃO DE PRÊMIOS INDIVIDUAIS ---
-// Cada vez que ganha um prêmio, libera XP bônus distribuído entre as 6 categorias.
+// Cada vez que ganha um prêmio, libera XP bônus distribuído entre as 5 categorias.
 // Os valores são equilibrados conforme a importância real do prêmio na NBA.
 // Tipos:
 //   - 'once':    pode ganhar 1x na carreira (ROY, MIP — geralmente)
@@ -2488,10 +2494,11 @@ function checkBadgeProgress(){
       state.totals.xpEarned += xpGanho;
       state.badges[b.nome] = atual;
       novos.push({ nome:b.nome, tier:BADGE_TIERS[atual], xp:xpGanho, pool });
-    } else if (atual < creditado){
-      // Regrediu (atributo caiu) — atualiza sem cobrar XP de volta
-      state.badges[b.nome] = atual;
     }
+    // v9 fix — state.badges[nome] é HIGH-WATER MARK do XP já creditado, não o tier
+    // ativo. NÃO baixar na regressão: se baixasse, descer e subir o atributo
+    // re-creditaria o mesmo tier (farm/duplicação de XP). O tier exibido/usado vem de
+    // getBadgeStatus (qualified ao vivo) + state.badgesUsing — este campo é só crédito.
   });
   return novos;
 }
@@ -2693,7 +2700,7 @@ function calcGameXP(g){
 
   // FG%: pune total se mt baixo
   let fgPenalty = 1;
-  if (fgp !== null && fgp > 0){
+  if (fgp !== null && fgp >= 0){  // v9 fix — inclui 0% (jogo 0/N): antes o pior FG% escapava da penalidade
     if (fgp < 25) { fgPenalty = 0.8; breakdown.push({name:'FG% < 25%', mult:0.8, desc:'penalidade pesada', penalty:true}); }
     else if (fgp < 35) { fgPenalty = 0.9; breakdown.push({name:'FG% < 35%', mult:0.9, desc:'penalidade leve', penalty:true}); }
   }
@@ -3725,7 +3732,7 @@ function renderCareer(){
       const cell = v => v == null ? '—' : (+v).toFixed(1);
       const row = (nome, s, cor) => s ? `<tr><td style="text-align:left;color:${cor};font-weight:700">${nome}</td><td>${s.n}</td><td>${cell(s.pts)}</td><td>${cell(s.reb)}</td><td>${cell(s.ast)}</td><td>${s.fgp==null?'—':cell(s.fgp)+'%'}</td></tr>` : '';
       splitsEl.innerHTML = `
-        <table style="width:100%;margin-top:10px;border-collapse:collapse;font-family:'JetBrains Mono',monospace;font-size:11px;text-align:center">
+        <table style="width:100%;margin-top:10px;border-collapse:collapse;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace,monospace;font-size:11px;text-align:center">
           <thead><tr style="color:var(--muted);letter-spacing:1px;font-size:9px;text-transform:uppercase">
             <th style="text-align:left;padding:4px 6px">Split</th><th>J</th><th>PPG</th><th>RPG</th><th>APG</th><th>FG%</th></tr></thead>
           <tbody>${row('📅 REGULAR', r, 'var(--text)')}${row('🏆 PLAYOFFS', p, 'var(--gold)')}</tbody>
@@ -3974,6 +3981,10 @@ function renderAttrs(){
       }
     });
   });
+  // v9 fix — reaplica o filtro de busca ativo após reconstruir o grid, pra não
+  // "perder" a busca do usuário (ex: "dunk") toda vez que dá upgrade/renderAll.
+  const _fq = document.getElementById('attrSearch');
+  if (_fq && _fq.value.trim()) filterAttrs(_fq.value);
 }
 
 // ============================================================
@@ -4385,11 +4396,11 @@ function renderRules(){
   for (const cat of ['INS','OUT','PLY','DEF','ATH']){
     const info = CAT_INFO[cat];
     html += `<div>
-      <div style="font-family:'Bebas Neue';font-size:16px;letter-spacing:2px;color:${info.color};margin-bottom:6px">${info.name}</div>`;
+      <div style="font-family:'Bebas Neue','Arial Narrow',sans-serif;font-size:16px;letter-spacing:2px;color:${info.color};margin-bottom:6px">${info.name}</div>`;
     byCat[cat].sort((a,b)=>b.peso-a.peso).forEach(a => {
       html += `<div style="display:flex;justify-content:space-between;padding:3px 0;font-size:12px;border-bottom:1px dashed var(--line)">
         <span>${a.name}</span>
-        <span style="font-family:'JetBrains Mono';color:var(--accent);font-weight:700">P${a.peso}</span>
+        <span style="font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;color:var(--accent);font-weight:700">P${a.peso}</span>
       </div>`;
     });
     html += `</div>`;
@@ -4465,7 +4476,9 @@ function readGameForm(){
     g.compiledN = 0;
   }
   document.querySelectorAll('[data-stat]').forEach(i => {
-    g[i.dataset.stat] = i.value === '' ? '' : (+i.value || 0);
+    // v9 fix — clampa negativos a 0 (igual ao caminho do lote). Sem isto, tov=-5
+    // virava +15 XP de Playmaking (penalidade invertida em bônus).
+    g[i.dataset.stat] = i.value === '' ? '' : Math.max(0, +i.value || 0);
   });
   return g;
 }
@@ -4956,7 +4969,7 @@ function showShareModal(url, len){
     <div class="modal" style="max-width:640px">
       <h2>📤 LINK DO SEU SAVE</h2>
       <p>Clipboard bloqueado. Seleciona tudo abaixo e copia manualmente (${(len/1024).toFixed(1)}KB). Manda pra você mesmo via WhatsApp/e-mail e abre o link no celular.</p>
-      <textarea readonly rows="6" style="width:100%;background:var(--bg);border:1px solid var(--line);color:var(--text);padding:10px;border-radius:8px;font-family:'JetBrains Mono';font-size:10px;outline:none;word-break:break-all">${url}</textarea>
+      <textarea readonly rows="6" style="width:100%;background:var(--bg);border:1px solid var(--line);color:var(--text);padding:10px;border-radius:8px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;outline:none;word-break:break-all">${url}</textarea>
       <div class="modal-actions">
         <button class="btn primary" onclick="this.closest('.modal-bg').remove()">FECHAR</button>
       </div>
@@ -5186,32 +5199,32 @@ function showMultiGamePreview(games){
   const statIn = (i, k, v, wpx) => `<label style="display:flex;flex-direction:column;align-items:center;gap:1px">
     <input type="number" id="mg-${k}-${i}" value="${v ?? ''}" min="0" max="99"
       style="width:${wpx}px;background:var(--bg-2);border:1px solid var(--line);color:var(--text);
-      text-align:center;border-radius:5px;padding:3px 1px;font-family:'JetBrains Mono';font-size:11px">
-    <span style="font-size:8px;color:var(--muted);font-family:'JetBrains Mono';letter-spacing:.5px">${k.toUpperCase()}</span>
+      text-align:center;border-radius:5px;padding:3px 1px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px">
+    <span style="font-size:8px;color:var(--muted);font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;letter-spacing:.5px">${k.toUpperCase()}</span>
   </label>`;
   box.innerHTML = games.map((g, i) => `
     <div style="background:var(--bg);border:1px solid ${g._suspect ? 'var(--gold)' : 'var(--line)'};border-radius:8px;padding:8px 10px">
       <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:6px">
         <input type="checkbox" id="mg-ck-${i}" ${(g._checked !== undefined ? g._checked : !g._suspect) ? 'checked' : ''}>
         <input type="date" id="mg-date-${i}" value="${esc(g.date)}"
-          style="background:var(--bg-2);border:1px solid var(--line);color:var(--text);padding:3px 5px;border-radius:5px;font-family:'JetBrains Mono';font-size:10px">
+          style="background:var(--bg-2);border:1px solid var(--line);color:var(--text);padding:3px 5px;border-radius:5px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px">
         <input type="text" id="mg-opp-${i}" value="${esc(g.opp || '')}" placeholder="OPP" maxlength="8"
-          style="width:64px;background:var(--bg-2);border:1px solid var(--line);color:var(--text);padding:3px 5px;border-radius:5px;font-family:'JetBrains Mono';font-size:11px;text-transform:uppercase">
+          style="width:64px;background:var(--bg-2);border:1px solid var(--line);color:var(--text);padding:3px 5px;border-radius:5px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px;text-transform:uppercase">
         <select id="mg-res-${i}" style="background:var(--bg-2);border:1px solid ${g._needResult ? 'var(--gold)' : 'var(--line)'};
-          color:var(--text);padding:3px 5px;border-radius:5px;font-family:'JetBrains Mono';font-size:11px">
+          color:var(--text);padding:3px 5px;border-radius:5px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px">
           <option value="W" ${g.result === 'W' ? 'selected' : ''}>W</option>
           <option value="L" ${g.result === 'L' ? 'selected' : ''}>L</option>
         </select>
-        <label style="display:flex;align-items:center;gap:3px;font-family:'JetBrains Mono';font-size:10px;color:var(--gold);cursor:pointer" title="Marcar como jogo de playoff (+20% XP)">
+        <label style="display:flex;align-items:center;gap:3px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--gold);cursor:pointer" title="Marcar como jogo de playoff (+20% XP)">
           <input type="checkbox" id="mg-po-${i}" ${g.isPlayoffs ? 'checked' : ''}> 🏆PO
         </label>
-        ${g._score ? `<span style="font-family:'JetBrains Mono';font-size:10px;color:var(--muted)">${esc(g._score)}</span>` : ''}
+        ${g._score ? `<span style="font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--muted)">${esc(g._score)}</span>` : ''}
       </div>
       <div style="display:flex;gap:5px;flex-wrap:wrap">
         ${statIn(i,'min',g.min,38)}${statIn(i,'pts',g.pts,38)}${statIn(i,'reb',g.reb,38)}${statIn(i,'ast',g.ast,38)}
         ${statIn(i,'stl',g.stl,34)}${statIn(i,'blk',g.blk,34)}${statIn(i,'tov',g.tov,34)}${statIn(i,'fgm',g.fgm,34)}${statIn(i,'fga',g.fga,34)}
       </div>
-      ${g._warns.length ? `<div style="margin-top:5px;font-family:'JetBrains Mono';font-size:10px;color:var(--gold)">⚠ ${esc(g._warns.join(' · '))}${g._suspect ? ' — confere os valores e marca a linha' : ''}</div>` : ''}
+      ${g._warns.length ? `<div style="margin-top:5px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--gold)">⚠ ${esc(g._warns.join(' · '))}${g._suspect ? ' — confere os valores e marca a linha' : ''}</div>` : ''}
     </div>
   `).join('');
   $('multiGameCount').textContent = games.length;
@@ -5552,7 +5565,7 @@ function parseAttrsAndPreview(){
   // PREVIEW com diff colorido
   _parsedAttrs = found;
   const previewArea = $('attrPreviewArea');
-  let html = `<div style="font-family:'JetBrains Mono';font-size:11px;color:var(--muted);margin-bottom:8px;letter-spacing:.5px">
+  let html = `<div style="font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:11px;color:var(--muted);margin-bottom:8px;letter-spacing:.5px">
     📊 Achei <b style="color:var(--accent)">${keys.length}</b> atributos. Confira antes de aplicar:
   </div><div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">`;
 
@@ -5565,7 +5578,7 @@ function parseAttrsAndPreview(){
     let color = 'var(--muted)', arrow = '=';
     if (diff > 0){ color = 'var(--green)'; arrow = '↑'; }
     else if (diff < 0){ color = 'var(--red)'; arrow = '↓'; }
-    html += `<label style="display:flex;align-items:center;gap:6px;padding:4px 8px;background:var(--bg-2);border-radius:4px;font-family:'JetBrains Mono';font-size:10.5px;cursor:pointer">
+    html += `<label style="display:flex;align-items:center;gap:6px;padding:4px 8px;background:var(--bg-2);border-radius:4px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10.5px;cursor:pointer">
       <input type="checkbox" data-attr-code="${code}" checked style="margin:0" />
       <span style="flex:1;color:var(--text)">${attr.name}</span>
       <span style="color:var(--muted)">${oldVal}</span>
@@ -5577,7 +5590,7 @@ function parseAttrsAndPreview(){
   // Avisar atributos NÃO encontrados (do total de 37)
   const naoAchou = ATTRS.filter(a => found[a.code] == null).map(a => a.code);
   if (naoAchou.length > 0){
-    html += `<div style="margin-top:10px;padding:8px;background:rgba(244,196,48,.06);border:1px dashed rgba(244,196,48,.4);border-radius:6px;font-family:'JetBrains Mono';font-size:10px;color:var(--gold);letter-spacing:.3px">
+    html += `<div style="margin-top:10px;padding:8px;background:rgba(244,196,48,.06);border:1px dashed rgba(244,196,48,.4);border-radius:6px;font-family:'JetBrains Mono',ui-monospace,'Consolas',monospace;font-size:10px;color:var(--gold);letter-spacing:.3px">
       ⚠ Não achei (mantém valor atual): ${naoAchou.join(', ')}
     </div>`;
   }
