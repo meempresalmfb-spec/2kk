@@ -2095,6 +2095,7 @@ const BALANCE_MODES = {
     feitMult: 1.0,         // multiplicador do bônus DD/TD manuais
     winBonus: 1.10,        // bônus de vitória
     lossPenalty: 0.92,     // penalidade de derrota
+    maturityK: 0.05,       // v9: freio de maturidade — custo sobe com o OVR (leve no casual)
   },
   realista: {
     name: '🟡 REALISTA',
@@ -2109,6 +2110,7 @@ const BALANCE_MODES = {
     feitMult: 0.7,
     winBonus: 1.06,
     lossPenalty: 0.95,
+    maturityK: 0.09,       // v9: freio de maturidade — médio
   },
   simulacao: {
     name: '🔴 SIMULAÇÃO NBA',
@@ -2123,6 +2125,7 @@ const BALANCE_MODES = {
     feitMult: 0.35,          // v5.2: -15pp
     winBonus: 1.04,
     lossPenalty: 0.97,
+    maturityK: 0.13,       // v9: freio de maturidade — forte (late-game suado)
   },
 };
 
@@ -2253,6 +2256,11 @@ function archFactor(code, power, zone){
 }
 
 // FUNÇÃO PRINCIPAL: substitui upgradeCost antigo (que recebia {val, peso})
+// v9 — freio de maturidade: fator >=1 que cresce com o OVR (k vem do modo), morde acima de 78.
+// Build maduro encarece TODO upgrade, pra XP encalhado não tapar buracos baratos no late-game.
+function maturityFactor(){
+  return 1 + Math.max(0, displayOverall() - 78) * (getBalance().maturityK || 0);
+}
 function upgradeCost(arg){
   // Aceita string (code) ou objeto antigo {val, peso} pra retrocompat de chamadas internas
   let code;
@@ -2280,7 +2288,7 @@ function upgradeCost(arg){
   const bio  = bioFactor(code, hN, wN, wsN);
   const arch = archFactor(code, power, zone);
 
-  const cost = base * diff * bio * arch;
+  const cost = base * diff * bio * arch * maturityFactor(); // v9 — freio de maturidade
   return Math.max(1, Math.round(cost));
 }
 
@@ -2299,6 +2307,7 @@ function upgradeCostBreakdown(code){
     diff: DIFF[code] != null ? DIFF[code] : 1,
     bio:  bioFactor(code, hN, wN, wsN),
     arch: archFactor(code, power, zone),
+    maturity: maturityFactor(),
   };
 }
 
@@ -2569,10 +2578,12 @@ function setBadgeUsing(nome, newTier){
 
   const pool = BADGE_CAT_POOL[badge.cat] || 'ATH';
 
-  // Calcula pedágio (diferença de cobrança)
-  const oldPedagio = calcBadgePedagio(badge, qualified, oldUsing);
-  const newPedagio = calcBadgePedagio(badge, qualified, newTier);
-  const deltaPedagio = newPedagio - oldPedagio; // >0: paga · <0: refund
+  // v9 — reconcilia contra o pedágio REALMENTE pago (state.badgesPedagio[nome]), não recomputado.
+  // Assim, subir o atributo (qualified sobe) devolve o excesso pago, sem vazamento de XP.
+  if (!state.badgesPedagio) state.badgesPedagio = {};
+  const jaPago = state.badgesPedagio[nome] || 0;
+  const newPedagio = calcBadgePedagio(badge, qualified, newTier); // custo p/ manter newTier acima do qualified atual
+  const deltaPedagio = newPedagio - jaPago; // >0: paga a diferença · <0: refund do excesso
 
   if (deltaPedagio > 0){
     // Vai PAGAR pedágio — verifica saldo
@@ -2594,6 +2605,7 @@ function setBadgeUsing(nome, newTier){
     state.badgesUsing[nome] = newTier;
     toast(`${badge.nome}: ${newTier>=0?'usando '+BADGE_TIERS[newTier]:'desativada'}`, 'green');
   }
+  state.badgesPedagio[nome] = newPedagio; // v9 — registra o pedágio efetivamente vigente
   saveLocal();
   renderAll();
   return true;
@@ -2698,11 +2710,24 @@ function calcGameXP(g){
   // TOV: pune Playmaking — −3.0 XP/tov
   xp.PLY -= tov * 3.0 * BASE_MULT;
 
-  // FG%: pune total se mt baixo
+  // FG%: v9 — eficiência premia E pune (antes só punia < 35%, cego a aproveitamento alto).
+  // Recompensa quem converte bem e afunda o perdulário. O BÔNUS é ponderado por volume de
+  // arremessos (FGA), pra 2/2 não virar "elite". A variável segue chamada fgPenalty (pode ser >1).
   let fgPenalty = 1;
-  if (fgp !== null && fgp >= 0){  // v9 fix — inclui 0% (jogo 0/N): antes o pior FG% escapava da penalidade
-    if (fgp < 25) { fgPenalty = 0.8; breakdown.push({name:'FG% < 25%', mult:0.8, desc:'penalidade pesada', penalty:true}); }
-    else if (fgp < 35) { fgPenalty = 0.9; breakdown.push({name:'FG% < 35%', mult:0.9, desc:'penalidade leve', penalty:true}); }
+  if (fgp !== null && fgp >= 0){
+    const fga = +g.fga || 0;
+    if (fgp < 25)      { fgPenalty = 0.75; breakdown.push({name:'FG% < 25%',   mult:0.75, desc:'péssimo aproveitamento', penalty:true}); }
+    else if (fgp < 35) { fgPenalty = 0.90; breakdown.push({name:'FG% 25–35%',  mult:0.90, desc:'aproveitamento fraco', penalty:true}); }
+    else if (fgp < 45) { fgPenalty = 1.00; /* neutro */ }
+    else {
+      const raw = fgp < 55 ? 1.06 : (fgp < 65 ? 1.12 : 1.18);
+      const vol = Math.min(1, fga / 10);          // < 10 FGA: bônus parcial (amostra pequena)
+      fgPenalty = 1 + (raw - 1) * vol;
+      if (fgPenalty > 1.001){
+        const faixa = fgp < 55 ? '45–55%' : (fgp < 65 ? '55–65%' : '65%+');
+        breakdown.push({name:`FG% ${faixa}`, mult:fgPenalty, desc:`eficiência${vol<1?' (volume baixo)':''}`, penalty:false});
+      }
+    }
   }
 
   // BADGES (marcos de jogo)
@@ -3509,22 +3534,22 @@ function renderAwards(){
         if (wasOn){
           // desligar — refund
           state.awards[key] = false;
-          refundAwardXP(aw.reward);
+          refundAwardXP(key, aw.reward);
           toast(`✗ ${aw.name} removido (−${aw.reward} XP)`, 'red');
         } else {
           state.awards[key] = true;
-          grantAwardXP(aw.reward);
+          grantAwardXP(key, aw.reward);
           toast(`🏆 ${aw.name} conquistado! (+${aw.reward} XP)`, 'gold');
         }
       } else if (action === 'inc'){
         state.awards[key] = (+state.awards[key] || 0) + 1;
-        grantAwardXP(aw.reward);
+        grantAwardXP(key, aw.reward);
         toast(`🏆 +1 ${aw.name} (+${aw.reward} XP)`, 'gold');
       } else if (action === 'dec'){
         const cur = +state.awards[key] || 0;
         if (cur > 0){
           state.awards[key] = cur - 1;
-          refundAwardXP(aw.reward);
+          refundAwardXP(key, aw.reward);
           toast(`✗ −1 ${aw.name} (−${aw.reward} XP)`, 'red');
         }
       }
@@ -3536,21 +3561,25 @@ function renderAwards(){
   });
 }
 
-function grantAwardXP(total){
+// v9 — award grant/refund reconciliado por PILHA: guarda o XP EXATO concedido em cada unidade
+// (state.awardsXP[key]) e devolve exatamente esse valor no refund. Antes recomputava
+// total×awardMult ATUAL — conceder num modo e remover em outro vazava/roubava XP.
+function grantAwardXP(key, total){
   const adj = Math.round(total * getBalance().awardMult);
+  if (!state.awardsXP) state.awardsXP = {};
+  (state.awardsXP[key] = state.awardsXP[key] || []).push(adj);
   const perCat = adj / 5;
-  for (const k of ['OUT','INS','PLY','DEF','ATH']){
-    state.pools[k] += perCat;
-  }
+  for (const k of ['OUT','INS','PLY','DEF','ATH']) state.pools[k] += perCat;
   state.totals.xpEarned += adj;
 }
 
-function refundAwardXP(total){
-  const adj = Math.round(total * getBalance().awardMult);
+function refundAwardXP(key, total){
+  if (!state.awardsXP) state.awardsXP = {};
+  const stack = state.awardsXP[key] || [];
+  // devolve o valor REALMENTE concedido; fallback pro cálculo antigo se não houver registro
+  const adj = stack.length ? stack.pop() : Math.round(total * getBalance().awardMult);
   const perCat = adj / 5;
-  for (const k of ['OUT','INS','PLY','DEF','ATH']){
-    state.pools[k] -= perCat;
-  }
+  for (const k of ['OUT','INS','PLY','DEF','ATH']) state.pools[k] -= perCat;
   state.totals.xpEarned -= adj;
 }
 
@@ -3889,8 +3918,10 @@ function renderAttrs(){
       const tier = tierClass(val);
       // v5 — decomposição do custo (tooltip educativo: base × diff × bio × arch)
       const bd = upgradeCostBreakdown(a.code);
-      const tooltipDecomp = bd ? `BASE ${bd.base} × DIFF ${bd.diff.toFixed(2)} × BIO ${bd.bio.toFixed(2)} × ARCH ${bd.arch.toFixed(2)} = ${cost} XP` : '';
-      const subDecomp = bd ? `<div class="cost-decomp">b${bd.base}·d${bd.diff.toFixed(2)}·bio${bd.bio.toFixed(2)}·ar${bd.arch.toFixed(2)}</div>` : '';
+      const matStr = (bd && bd.maturity > 1.001) ? ` × MAT ${bd.maturity.toFixed(2)}` : '';
+      const matSub = (bd && bd.maturity > 1.001) ? `·mat${bd.maturity.toFixed(2)}` : '';
+      const tooltipDecomp = bd ? `BASE ${bd.base} × DIFF ${bd.diff.toFixed(2)} × BIO ${bd.bio.toFixed(2)} × ARCH ${bd.arch.toFixed(2)}${matStr} = ${cost} XP` : '';
+      const subDecomp = bd ? `<div class="cost-decomp">b${bd.base}·d${bd.diff.toFixed(2)}·bio${bd.bio.toFixed(2)}·ar${bd.arch.toFixed(2)}${matSub}</div>` : '';
       const row = document.createElement('div');
       row.className = 'attr-row';
       row.innerHTML = `
@@ -5821,9 +5852,16 @@ function syncProfileFromInputs(){
     const v = ovrMan.value.trim();
     state.profile.ovrManual = v === '' ? null : Math.max(40, Math.min(99, +v || 60));
   }
-  // v5.1 — balanceMode
+  // v5.1 — balanceMode · v9 — avisa se troca no meio da carreira (XP/custos não reconciliam)
   const bm = $('balanceModeSel');
-  if (bm && BALANCE_MODES[bm.value]) state.profile.balanceMode = bm.value;
+  if (bm && BALANCE_MODES[bm.value]){
+    const mudou = bm.value !== state.profile.balanceMode;
+    const temCarreira = (state.games && state.games.length) || (state.career && state.career.gamesTotal);
+    state.profile.balanceMode = bm.value;
+    if (mudou && temCarreira && typeof toast === 'function'){
+      setTimeout(() => toast('⚠️ Modo trocado no meio da carreira: XP e custos já existentes NÃO são recalculados. Pra medição limpa, comece um save novo.', 'gold'), 300);
+    }
+  }
 }
 
 // --- TOAST (v7.1: fila sequencial — múltiplos toasts não se sobrescrevem) ---
