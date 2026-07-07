@@ -5181,7 +5181,12 @@ function parseMultiGames(raw){
     // v7.6 — linha com evidência forte de jogo (placar, W/L ou @SIGLA) entra mesmo parcial
     const hasEvidence = !!(g._score || g.result || (g.opp && g.opp.startsWith('@')));
     if (nums.length < 3) continue;
-    if (nums.length < 5 && !hasEvidence) continue;
+    // v9 — antes: linha com <5 números E sem data/opp/placar sumia EM SILÊNCIO. Era exatamente
+    // o "1º jogo" da tela Recent Games do 2K, cuja DATE/OPP fica coberta pelo card do jogador na
+    // foto — sem âncora + OCR degradado na faixa do topo. Agora ela ENTRA como suspeita
+    // (desmarcada, com aviso, pra você conferir/completar) em vez de desaparecer. 4+ nums basta.
+    if (nums.length < 4 && !hasEvidence) continue;
+    if (!hasEvidence && !g.date){ g._suspect = true; g._warns.push('linha órfã (sem data/opp) — confere'); }
 
     // v7.6 — ANCORAGEM POR MIN: minutos são sempre 20-60. Se o 1º número é <20,
     // o OCR perdeu o MIN e a linha inteira deslocaria uma casa — o mapeamento compensa.
